@@ -1,0 +1,32 @@
+{
+  "name": "wpmanager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulAvery/node-wpmanager.git"
+  },
+  "bin": {
+    "wpmanager": "./bin/wpmanager.js"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6",
+    "jshint-stylish": "^1.0.0"
+  },
+  "scripts": {
+    "test": "jshint . --exclude-path .gitignore --reporter node_modules/jshint-stylish/stylish.js"
+  },
+  "author": "Florian Albertz",
+  "license": "BSD-3-Clause",
+  "jshintConfig": {
+    "node": true,
+    "mocha": true
+  },
+  "dependencies": {
+    "color": "^0.7.3",
+    "color-thief": "^2.2.0",
+    "commander": "^2.5.0",
+    "urllib-sync": "^1.0.1",
+    "valid-url": "^1.0.9"
+  }
+}
