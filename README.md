@@ -11,29 +11,37 @@ Installation
 
 CLI
 ---
-### list
+### wpmanager list
 Print available wallpapers
 
-### add src [src ...]
+### wpmanager add src [src ...]
 Add wallpapers. `src` can be a url or a local file path.
 
-### change [name]
+### wpmanager change [name]
 Change the current wallpaper to a random one, or to the given name.
 
-### current
+### wpmanager current
 Prints the full path to the current wallpaper
 
 	feh --bg-fill "$(wpmanager current)"
 
-### currentx
+### wpmanager currentx
 Prints the full path to the current Xresources file
 
 	cat "$(wpmanager currentx)" | xrdb -merge
 
-### currentc
+### wpmanager currentc
 Prints the full path to the current bash colors file.
 
 	source "$(wpmanager currentc)"
 
-### colors file
+### wpmanager colors file
 Extracts hex color codes from a given file
+
+Inspiration
+-----------
+Inspiration was taken (well, I basically copied large parts of his script) from Caleb Everett's [wp](https://github.com/everett1992/wp) bash script.
+
+He in turn took code from [this blog post](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/) so I am listing it here as well.
+
+I may switch to using Charles Leifer's palette generation via k-means in the future, for now this application uses [color-thief](https://www.npmjs.org/package/color-thief);
