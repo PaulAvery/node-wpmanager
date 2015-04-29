@@ -1,7 +1,6 @@
 wpmanager
 =========
 A wallpaper management application written in JavaScript.
-It generates codes for your `.Xresources` and bash exports.
 
 Installation
 ------------
@@ -21,22 +20,16 @@ Add wallpapers. `src` can be a url or a local file path.
 Change the current wallpaper to a random one, or to the given name.
 
 ### wpmanager current
-Prints the full path to the current wallpaper
+Prints the id of the current wallpaper
 
-	feh --bg-fill "$(wpmanager current)"
-
-### wpmanager currentx
+### wpmanager currentp
 Prints the full path to the current Xresources file
 
-	cat "$(wpmanager currentx)" | xrdb -merge
+	feh --bg-fill "$(wpmanager currentp)"
 
-### wpmanager currentc
-Prints the full path to the current bash colors file.
+### wpmanager colors name
+Extracts 10 colors from the picture and prints them as a JSON array.
 
-	source "$(wpmanager currentc)"
-
-### wpmanager colors file
-Extracts hex color codes from a given file
 
 Inspiration
 -----------
