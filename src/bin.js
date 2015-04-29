@@ -69,9 +69,7 @@ app.command('colors')
 	.description('Print the colors for a given image')
 	.action(co.wrap(function *(name) {
 		try {
-			console.log(JSON.stringify({
-				name: yield wp.colors(name)
-			}));
+			console.log(JSON.stringify(yield wp.colors(name)));
 		} catch(e) {
 			console.error(e.stack);
 		}

@@ -81,7 +81,7 @@ export default class WallpaperManager {
 
 	*colors(file) {
 		var thief = new Thief();
-		var colors = thief.getPalette(file, 8, 0);
+		var colors = thief.getPalette(this.resolve(file), 10, 1);
 
 		return colors;
 	}
