@@ -26,15 +26,3 @@ Prints the id of the current wallpaper
 Prints the full path to the current Xresources file
 
 	feh --bg-fill "$(wpmanager currentp)"
-
-### wpmanager colors name
-Extracts 10 colors from the picture and prints them as a JSON array.
-
-
-Inspiration
------------
-Inspiration was taken (well, I basically copied large parts of his script) from Caleb Everett's [wp](https://github.com/everett1992/wp) bash script.
-
-He in turn took code from [this blog post](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/) so I am listing it here as well.
-
-I may switch to using Charles Leifer's palette generation via k-means in the future, for now this application uses [color-thief](https://www.npmjs.org/package/color-thief);

@@ -21,7 +21,6 @@
   "author": "Florian Albertz",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@paulavery/color-thief": "^2.1.1",
     "co": "^4.5.2",
     "co-fs": "^1.2.0",
     "commander": "^2.8.0",

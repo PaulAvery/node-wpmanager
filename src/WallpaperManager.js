@@ -1,7 +1,6 @@
 import fs from 'co-fs';
 import uri from 'valid-url';
 import path from 'path';
-import Thief from '@paulavery/color-thief';
 import mkdirp from 'mkdirp';
 import {request} from 'urllib';
 
@@ -77,17 +76,5 @@ export default class WallpaperManager {
 		if(ls.indexOf(name) === -1) throw new Error('Invalid wallpaper set');
 
 		return name;
-	}
-
-	*colors(file) {
-		var thief = new Thief();
-		var colors = thief.getPalette(this.resolve(file), 16, 1);
-
-		return colors.map(color => {
-			return {
-				rgb: color,
-				hex: color.map(v => ('00' + v.toString(16)).slice(-2))
-			};
-		});
 	}
 }
